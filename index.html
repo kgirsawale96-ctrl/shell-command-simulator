@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Command Shell</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="terminal-container">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <div class="button close"></div>
+                <div class="button minimize"></div>
+                <div class="button maximize"></div>
+            </div>
+            <div class="terminal-title">Arithmetic Shell v1.0</div>
+        </div>
+        
+        <div class="terminal-body">
+            <div id="output" class="output">
+                <div class="welcome-message">
+                    <div>========================================</div>
+                    <div>    Arithmetic Command Shell v1.0</div>
+                    <div>========================================</div>
+                    <div>Welcome to the Web-Based Arithmetic Shell!</div>
+                    <div>Type 'help' for available commands.</div>
+                    <div></div>
+                    <div>Example commands to try:</div>
+                    <div>  add 5 3     → Adds two numbers</div>
+                    <div>  sub 10 4    → Subtracts second number from first</div>
+                    <div>  mul 6 7     → Multiplies two numbers</div>
+                    <div>  div 20 5    → Divides first number by second</div>
+                    <div>  clear       → Clears the terminal</div>
+                    <div>  help        → Shows this help message</div>
+                    <div></div>
+                </div>
+            </div>
+            
+            <div class="input-line">
+                <span class="prompt">$ </span>
+                <input type="text" id="command-input" class="command-input" autofocus 
+                       placeholder="Enter command..." autocomplete="off">
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

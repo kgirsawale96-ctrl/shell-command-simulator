@@ -1,0 +1,227 @@
+/* Arithmetic Command Shell - Terminal Theme Styling */
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #1a1a1a;
+    color: #00ff00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Terminal container */
+.terminal-container {
+    width: 100%;
+    max-width: 800px;
+    height: 600px;
+    background-color: #000000;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 255, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #00ff00;
+}
+
+/* Terminal header */
+.terminal-header {
+    background-color: #2d2d2d;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #00ff00;
+}
+
+.terminal-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.button.close {
+    background-color: #ff5f56;
+}
+
+.button.minimize {
+    background-color: #ffbd2e;
+}
+
+.button.maximize {
+    background-color: #27c93f;
+}
+
+.terminal-title {
+    color: #00ff00;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Terminal body */
+.terminal-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    overflow: hidden;
+}
+
+/* Output area */
+.output {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 12px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.4;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Custom scrollbar for output */
+.output::-webkit-scrollbar {
+    width: 8px;
+}
+
+.output::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+.output::-webkit-scrollbar-thumb {
+    background: #00ff00;
+    border-radius: 4px;
+}
+
+.output::-webkit-scrollbar-thumb:hover {
+    background: #00cc00;
+}
+
+/* Welcome message styling */
+.welcome-message {
+    color: #00ff00;
+    margin-bottom: 16px;
+}
+
+.welcome-message div {
+    margin: 2px 0;
+}
+
+/* Input line */
+.input-line {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    border-top: 1px solid #333;
+}
+
+.prompt {
+    color: #00ff00;
+    font-weight: bold;
+    margin-right: 8px;
+    user-select: none;
+}
+
+.command-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #00ff00;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    outline: none;
+    caret-color: #00ff00;
+}
+
+.command-input::placeholder {
+    color: #666;
+}
+
+/* Command history styling */
+.command-line {
+    margin: 2px 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+.command-input-display {
+    color: #00ff00;
+    margin-right: 8px;
+}
+
+.command-result {
+    color: #ffffff;
+    margin-left: 20px;
+}
+
+.error-message {
+    color: #ff5f56;
+    margin-left: 20px;
+}
+
+.success-message {
+    color: #27c93f;
+    margin-left: 20px;
+}
+
+.help-message {
+    color: #ffbd2e;
+    margin-left: 20px;
+}
+
+/* Cursor blink animation */
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+.command-input {
+    animation: blink 1s infinite;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .terminal-container {
+        height: 500px;
+        margin: 10px;
+    }
+    
+    .terminal-body {
+        padding: 12px;
+    }
+    
+    .output {
+        font-size: 12px;
+    }
+    
+    .command-input {
+        font-size: 12px;
+    }
+}
+
+/* Focus effects */
+.terminal-container:focus-within {
+    box-shadow: 0 10px 40px rgba(0, 255, 0, 0.3);
+}
+
+/* Smooth transitions */
+* {
+    transition: all 0.2s ease;
+}
